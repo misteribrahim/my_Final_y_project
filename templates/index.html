@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites Recommendation System</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Websites Recommendation System</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="search-container">
+            <form method="POST" onsubmit="return validateForm()" name="myForm" required>
+                <input type="text" name="searchwebsite" placeholder="Search for websites...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Websites Recommendation System</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["searchwebsite"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
